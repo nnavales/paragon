@@ -1,0 +1,5 @@
+.tests/
+tests/
+.lazy.lua
+extras/
+*.md

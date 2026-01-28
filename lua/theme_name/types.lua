@@ -1,0 +1,20 @@
+---@class theme_name.Palette
+---@field bg string
+---@field fg string
+---@field highlight_low string
+---@field highlight_med string
+---@field highlight_high string
+---@field subtle string
+---@field overlay string
+---@field muted string
+---@field red string
+---@field green string
+---@field yellow string
+---@field blue string
+---@field magenta string
+---@field cyan string
+---@field error string
+---@field warning string
+---@field info string
+---@field hint string
+---@field none string
