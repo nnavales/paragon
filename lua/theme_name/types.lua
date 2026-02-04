@@ -1,22 +1,21 @@
 ---@class theme_name.Palette
----@field jade string
----@field ember string
----@field gild string
----@field azure string
----@field ichor string
----@field smoke string
----@field subtle string
+---@field green string
+---@field red string
+---@field orange string
+---@field yellow string
+---@field cyan string
+---@field teal string
+---@field muted string
+---@field dim string
 ---@field fg string
 ---@field bg string
----@field surface string
+---@field fg_dim string
+---@field bg_dim string
 ---@field highlight_low string
 ---@field highlight_med string
 ---@field highlight_high string
+---@field surface string
 ---@field overlay string
----@field magenta string
----@field purple string
----@field red string
----@field gray string
 
 ---@class theme_name.ColorScheme: theme_name.Palette
 ---@field none string
