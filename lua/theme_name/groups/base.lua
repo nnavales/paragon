@@ -39,8 +39,8 @@ function M.get(c, opts)
 		Type = { fg = c.teal },
 
 		-- Operators & Delimiters (dim/gray)
-		Operator = { fg = c.dim },
-		Delimiter = { fg = c.dim },
+		Operator = { fg = c.fg_dim },
+		Delimiter = { fg = c.fg_dim },
 
 		-- Comments (muted/gray)
 		Comment = { fg = c.muted, style = opts.styles.comments },
@@ -58,9 +58,9 @@ function M.get(c, opts)
 		NormalNC = { fg = c.fg, bg = opts.transparent and c.none or c.bg_dim },
 		NormalSB = { fg = c.fg, bg = opts.transparent and c.none or c.bg_dim },
 		Conceal = { fg = c.fg_dim },
-		NonText = { fg = c.dim },
-		SpecialKey = { fg = c.dim },
-		Whitespace = { fg = c.dim },
+		NonText = { fg = c.fg_dim },
+		SpecialKey = { fg = c.fg_dim },
+		Whitespace = { fg = c.fg_dim },
 		EndOfBuffer = { fg = c.fg_dim },
 
 		-- Cursor & CursorLine
@@ -97,20 +97,20 @@ function M.get(c, opts)
 		Pmenu = { bg = c.surface, fg = c.fg_dim },
 		PmenuSel = { bg = c.highlight_high },
 		PmenuSbar = { bg = c.overlay },
-		PmenuThumb = { bg = c.dim },
+		PmenuThumb = { bg = c.fg_dim },
 		PmenuMatch = { bg = c.surface, fg = c.fg },
 		PmenuMatchSel = { bg = c.highlight_high, fg = c.fg },
 		WildMenu = { bg = c.surface, fg = c.fg_dim },
 
 		-- UI: STATUS & TAB LINES
 
-		StatusLine = { fg = c.fg, bg = opts.transparent and c.none or c.overlay },
+		StatusLine = { fg = c.fg, bg = opts.transparent and c.none or c.surface },
 		StatusLineNC = { fg = c.fg_dim, bg = opts.transparent and c.none or c.overlay },
 		WinBar = "StatusLine",
 		WinBarNC = "StatusLineNC",
 
-		TabLine = { bg = opts.transparent and c.none or c.overlay, fg = c.fg_dim },
-		TabLineFill = { bg = opts.transparent and c.none or c.overlay },
+		TabLine = { bg = opts.transparent and c.none or c.surface, fg = c.fg_dim },
+		TabLineFill = { bg = opts.transparent and c.none or c.surface },
 		TabLineSel = { fg = c.cyan, bg = opts.transparent and c.none or c.bg },
 		Title = { fg = c.cyan, bold = true },
 
@@ -159,7 +159,7 @@ function M.get(c, opts)
 		DiagnosticWarn = { fg = c.warning },
 		DiagnosticInfo = { fg = c.info },
 		DiagnosticHint = { fg = c.hint },
-		DiagnosticUnnecessary = { fg = c.dim },
+		DiagnosticUnnecessary = { fg = c.fg_dim },
 		DiagnosticVirtualTextError = { fg = c.error },
 		DiagnosticVirtualTextWarn = { fg = c.warning },
 		DiagnosticVirtualTextInfo = { fg = c.info },
@@ -177,8 +177,8 @@ function M.get(c, opts)
 		LspReferenceWrite = { bg = c.highlight_high },
 		LspSignatureActiveParameter = { bg = c.highlight_high, bold = true },
 		LspCodeLens = { fg = c.muted },
-		LspInlayHint = { bg = c.highlight_med, fg = c.dim },
-		LspInfoBorder = { fg = c.dim, bg = opts.transparent and c.none or c.overlay },
+		LspInlayHint = { bg = c.highlight_med, fg = c.fg_dim },
+		LspInfoBorder = { fg = c.fg_dim, bg = opts.transparent and c.none or c.overlay },
 
 		-- SPELL CHECKING
 

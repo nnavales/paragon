@@ -39,7 +39,7 @@ function M.get(c, opts)
 		["@keyword.function"] = "@keyword",
 		["@keyword.import"] = "@keyword",
 		["@keyword.coroutine"] = "@keyword",
-		["@keyword.operator"] = { fg = c.dim },
+		["@keyword.operator"] = { fg = c.fg_dim },
 
 		["@keyword.conditional"] = "@keyword",
 		["@keyword.repeat"] = "Repeat",
@@ -79,7 +79,7 @@ function M.get(c, opts)
 		["@tag.javascript"] = "@tag",
 		["@tag.builtin"] = "@tag",
 		["@tag.attribute"] = { fg = c.teal },
-		["@tag.delimiter.tsx"] = { fg = c.dim },
+		["@tag.delimiter.tsx"] = { fg = c.fg_dim },
 		["@tag.delimiter"] = "Delimiter",
 
 		-- IDENTIFIERS & VARIABLES
@@ -100,9 +100,9 @@ function M.get(c, opts)
 
 		["@punctuation.delimiter"] = "Delimiter",
 		["@punctuation.bracket"] = "Delimiter",
-		["@punctuation.special"] = { fg = c.dim },
+		["@punctuation.special"] = { fg = c.fg_dim },
 		["@punctuation.bracket.regexp"] = "Delimiter",
-		["@punctuation.special.markdown"] = { fg = c.dim },
+		["@punctuation.special.markdown"] = { fg = c.fg_dim },
 
 		-- MARKUP
 		["@none"] = {},
@@ -116,7 +116,7 @@ function M.get(c, opts)
 		["@markup.heading.5.markdown"] = { fg = c.yellow },
 		["@markup.heading.6.markdown"] = { fg = c.teal },
 
-		["@markup.link"] = { fg = c.dim },
+		["@markup.link"] = { fg = c.fg_dim },
 		["@markup.link.label"] = { fg = c.cyan },
 		["@markup.link.label.symbol"] = { fg = c.cyan },
 		["@markup.link.url"] = { fg = c.yellow, underline = true },

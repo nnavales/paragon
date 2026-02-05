@@ -6,29 +6,28 @@ function M.setup(opts)
 
 	---@class Palette
 	local palette = {
-		green = "#70C270", -- jade
-		orange = "#EE9A63", -- ember
-		yellow = "#E7C27A", -- gild
-		cyan = "#9AD7DA", -- azure
-		teal = "#649892", -- ichor
-		magenta = "#B8A0D9", -- arcana
+		magenta = "#B8A0D5", -- arcana
+		green = "#78CC78", -- jade
+		orange = "#E69A6C", -- ember
+		yellow = "#D9C471", -- gild
+		cyan = "#9EDFE2", -- azure
+		teal = "#6FA29E", -- ichor
 
-		muted = "#748488", -- smoke
+		muted = "#5A6569", -- smoke
 
 		fg = "#E9F2F2", -- E7F0F0 if 161616
 		bg = "#15181A", -- could be 161616
-		highlight_low = "#1c2224",
-		highlight_med = "#252d2f",
-		highlight_high = "#303a3c",
+		highlight_low = "#1A2124",
+		highlight_med = "#1E2528",
+		highlight_high = "#313B3F",
 
 		-- pure UI
-		surface = "#171C1E",
-		overlay = "#191E20",
-		dim = "#798689", -- col nums
+		surface = "#1F2629",
+		overlay = "#2A3134",
 
 		-- dim
 		bg_dim = "#0F1213",
-		fg_dim = "#8A9599",
+		fg_dim = "#7A8589",
 	}
 
 	---@class theme_name.ColorScheme: Palette
