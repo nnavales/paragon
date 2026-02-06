@@ -118,10 +118,10 @@ function M.get(c, opts)
 
 		-- Search
 		Search = { bg = c.highlight_med, fg = c.fg },
-		IncSearch = { bg = c.orange, fg = c.bg, bold = true },
+		IncSearch = { bg = c.yellow, fg = c.bg },
 		CurSearch = "IncSearch",
-		Substitute = { bg = c.orange, fg = c.bg },
-		MatchParen = { bg = c.highlight_high, fg = c.yellow, bold = true },
+		Substitute = { bg = c.yellow, fg = c.bg },
+		MatchParen = { fg = c.cyan, bold = true, underline = true },
 
 		-- Visual Mode
 		Visual = { bg = c.highlight_high },

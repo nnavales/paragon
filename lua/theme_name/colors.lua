@@ -41,6 +41,10 @@ function M.setup(opts)
 	colors.info = "#9AD7DA" -- blue
 	colors.hint = "#B8A0D9" -- grey/soft cyan/soft purple
 
+	colors.search = colors.yellow
+	colors.match = colors.yellow
+	colors.title = colors.cyan
+
 	colors.git = {
 		add = "#70C270",
 		delete = "#D04E63",
