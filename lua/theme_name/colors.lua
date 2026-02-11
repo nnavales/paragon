@@ -12,22 +12,26 @@ function M.setup(opts)
 		yellow = "#EAD88A", -- gild
 		cyan = "#9EDFE2", -- azure
 		teal = "#5FB3A3", -- ichor
-		muted = "#839396", -- smoke
+
+		muted = "#8B9C9F", -- smoke
 		semantic = "#C3D0D2",
 
-		fg = "#E9F2F2", -- E7F0F0 if 161616
-		bg = "#15181A", -- could be 161616
-		highlight_low = "#1A2124",
-		highlight_med = "#1E2528",
-		highlight_high = "#313B3F",
+		red = "#D04E63",
+
+		fg = "#E9F2F2",
+		bg = "#181A1C",
+		highlight_low = "#1B1E20",
+		highlight_med = "#202325",
+		highlight_high = "#33383C",
 
 		-- pure UI
-		surface = "#1F2629",
-		overlay = "#2A3134",
+		surface = "#1D2022",
+		overlay = "#262A2D",
 
 		-- dim
-		bg_dim = "#0F1213",
-		fg_dim = "#7A8589",
+		bg_dim = "#131618",
+		fg_dim = "#6E797E",
+		syntax_dim = "#7A878A",
 	}
 
 	---@class theme_name.ColorScheme: Palette
@@ -35,11 +39,11 @@ function M.setup(opts)
 
 	colors.none = "NONE"
 
-	colors.success = "#70C270" -- green
-	colors.error = "#D04E63" -- red
-	colors.warning = "#EE9A63" -- orange/yellow
-	colors.info = "#9AD7DA" -- blue
-	colors.hint = "#B8A0D9" -- grey/soft cyan/soft purple
+	colors.success = colors.green
+	colors.error = colors.red
+	colors.warning = colors.orange
+	colors.info = colors.cyan
+	colors.hint = colors.magenta
 
 	-- Search & Match - using existing palette colors with dim backgrounds
 	colors.search = colors.yellow
@@ -49,9 +53,9 @@ function M.setup(opts)
 	colors.title = colors.cyan
 
 	colors.git = {
-		add = "#70C270",
-		delete = "#D04E63",
-		change = "#9AD7DA",
+		add = colors.green,
+		delete = colors.red,
+		change = colors.cyan,
 	}
 
 	colors.diff = {
@@ -64,7 +68,7 @@ function M.setup(opts)
 	if opts.terminal_colors then
 		colors.terminal = {
 			black = colors.bg,
-			red = colors.error,
+			red = colors.orange,
 			green = colors.green,
 			yellow = colors.yellow,
 			blue = colors.cyan,

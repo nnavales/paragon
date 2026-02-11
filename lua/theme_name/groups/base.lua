@@ -32,8 +32,8 @@ function M.get(c, opts)
 
 		Type = { fg = c.teal, style = opts.styles.types },
 
-		Operator = { fg = c.fg_dim },
-		Delimiter = { fg = c.fg_dim },
+		Operator = { fg = c.syntax_dim },
+		Delimiter = { fg = c.syntax_dim },
 
 		Comment = { fg = c.muted, style = opts.styles.comments },
 		SpecialComment = { fg = c.muted, style = opts.styles.comments },

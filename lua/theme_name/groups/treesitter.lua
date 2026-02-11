@@ -36,7 +36,7 @@ function M.get(c, opts)
 		["@keyword.function"] = "@keyword",
 		["@keyword.import"] = "@keyword",
 		["@keyword.coroutine"] = "@keyword",
-		["@keyword.operator"] = { fg = c.fg_dim },
+		["@keyword.operator"] = { fg = c.syntax_dim },
 
 		["@keyword.conditional"] = "@keyword",
 		["@keyword.repeat"] = "Repeat",
@@ -91,9 +91,9 @@ function M.get(c, opts)
 
 		["@punctuation.delimiter"] = "Delimiter",
 		["@punctuation.bracket"] = "Delimiter",
-		["@punctuation.special"] = { fg = c.fg_dim },
+		["@punctuation.special"] = { fg = c.syntax_dim },
 		["@punctuation.bracket.regexp"] = "Delimiter",
-		["@punctuation.special.markdown"] = { fg = c.fg_dim },
+		["@punctuation.special.markdown"] = { fg = c.syntax_dim },
 
 		["@none"] = {},
 		["@markup"] = "@none",
