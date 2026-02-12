@@ -5,7 +5,6 @@ M.url = "https://github.com/folke/snacks.nvim"
 ---@type theme_name.HighlightsFn
 function M.get(c, opts)
 	return {
-		-- Dashboard - consistente con telescope
 		SnacksDashboardDesc = { fg = c.fg },
 		SnacksDashboardFooter = { fg = c.fg_dim },
 		SnacksDashboardHeader = { fg = c.green, bold = true },
@@ -14,7 +13,6 @@ function M.get(c, opts)
 		SnacksDashboardSpecial = { fg = c.fg },
 		SnacksDashboardDir = { fg = c.fg },
 
-		-- Notifier - estilo consistente con el tema
 		SnacksNotifierDebug = { fg = c.fg, bg = opts.transparent and c.none or c.bg },
 		SnacksNotifierBorderDebug = { fg = c.muted, bg = opts.transparent and c.none or c.bg },
 		SnacksNotifierIconDebug = { fg = c.muted },
@@ -41,12 +39,10 @@ function M.get(c, opts)
 		SnacksNotifierIconWarn = { fg = c.warning },
 		SnacksNotifierTitleWarn = { fg = c.warning },
 
-		-- Notifier History (ventana de historial con borde)
 		SnacksNotifierHistory = { fg = c.fg, bg = c.surface },
-		SnacksNotifierBorder = { fg = c.surface, bg = c.surface },
+		SnacksNotifierBorder = { fg = opts.borders and c.overlay or c.surface, bg = c.surface },
 		SnacksNotifierTitle = { fg = c.title, bg = c.overlay, bold = true },
 
-		-- Profiler
 		SnacksProfilerIconInfo = { bg = c.highlight_med, fg = c.cyan },
 		SnacksProfilerBadgeInfo = { bg = c.highlight_low, fg = c.cyan },
 		SnacksFooterKey = "SnacksProfilerIconInfo",
@@ -54,19 +50,16 @@ function M.get(c, opts)
 		SnacksProfilerIconTrace = { bg = c.highlight_med, fg = c.fg_dim },
 		SnacksProfilerBadgeTrace = { bg = c.highlight_low, fg = c.fg_dim },
 
-		-- Indent
 		SnacksIndent = { fg = c.muted, nocombine = true },
 		SnacksIndentScope = { fg = c.cyan, nocombine = true },
 
-		-- Zen & Input
 		SnacksZenIcon = { fg = c.magenta },
 		SnacksInputIcon = { fg = c.cyan },
 		SnacksInputBorder = { fg = c.yellow },
 		SnacksInputTitle = { fg = c.yellow, bold = true },
 
-		-- Picker - estilo telescope
 		SnacksPickerInput = { fg = c.fg, bg = c.surface },
-		SnacksPickerInputBorder = { fg = c.surface, bg = c.surface },
+		SnacksPickerInputBorder = { fg = opts.borders and c.overlay or c.surface, bg = c.surface },
 		SnacksPickerInputTitle = { fg = c.title, bg = c.overlay, bold = true },
 		SnacksPickerBoxTitle = { fg = c.title, bg = c.overlay, bold = true },
 		SnacksPickerSelected = { fg = c.fg, bg = c.highlight_high, bold = true },
@@ -74,11 +67,9 @@ function M.get(c, opts)
 		SnacksPickerPickWinCurrent = { fg = c.fg, bg = c.magenta, bold = true },
 		SnacksPickerPickWin = { fg = c.fg, bg = c.highlight_med, bold = true },
 
-		-- GitHub
 		SnacksGhLabel = { fg = c.cyan, bold = true },
 		SnacksGhDiffHeader = { bg = c.highlight_low, fg = c.cyan },
 
-		-- Indent colors (rainbow)
 		SnacksIndent1 = { fg = c.green, nocombine = true },
 		SnacksIndent2 = { fg = c.cyan, nocombine = true },
 		SnacksIndent3 = { fg = c.magenta, nocombine = true },
@@ -88,7 +79,6 @@ function M.get(c, opts)
 		SnacksIndent7 = { fg = c.error, nocombine = true },
 		SnacksIndent8 = { fg = c.fg, nocombine = true },
 
-		-- Notifier History adicionales
 		SnacksNotifierHistoryTitle = { fg = c.fg, bold = true },
 		SnacksNotifierHistoryDateTime = { fg = c.fg_dim },
 		SnacksNotifierMinimal = { fg = c.fg, bg = opts.transparent and c.none or c.bg },

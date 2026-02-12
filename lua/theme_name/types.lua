@@ -6,7 +6,7 @@
 ---@field cyan string
 ---@field teal string
 ---@field muted string
----@field dim string
+---@field syntax_dim string
 ---@field fg string
 ---@field bg string
 ---@field fg_dim string

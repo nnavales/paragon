@@ -28,7 +28,6 @@ end
 
 -- Simple string interpolation.
 -- Example template: "${name} is ${value}"
---
 ---@param str string template string
 ---@param table table key value pairs to replace in the string
 function M.template(str, table)

@@ -1,30 +1,26 @@
 local M = {}
 
 ---@class theme_name.Config
----@class theme_name.Config
 ---@field transparent boolean
 ---@field terminal_colors boolean
 ---@field styles table
----@field on_colors fun(colors: theme_name.ColorScheme)
----@field on_highlights fun(highlights: theme_name.Highlights, colors: theme_name.ColorScheme)
 M.defaults = {
 	transparent = false,
 	dim = true,
+	borders = true,
 	styles = {
 		keywords = {}, -- if, for, return, break, continue
-		functions = {}, -- function foo(), def foo()
+		functions = {}, -- foo(), bar()
 		types = {}, -- class, struct, int, enum
-		comments = { italic = true }, -- -- comentarios
+		comments = { italic = true }, -- -- comments
 		builtins = { italic = true }, -- print(), self, true, false
 	},
-	terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+	terminal_colors = true, -- configure the colors used when opening a `:terminal` in Neovim
 
-	---@param colors theme_name.ColorScheme
-	on_colors = function(colors) end,
-
-	---@param highlights theme_name.Highlights
-	---@param colors theme_name.ColorScheme
-	on_highlights = function(highlights, colors) end,
+	---@type table<string, boolean>
+	-- Override plugin highlights: telescope = false to disable, aerial = true to enable
+	-- By default: auto-detects with lazy.nvim, or loads all if no lazy.nvim
+	plugins = {},
 }
 
 ---@type theme_name.Config

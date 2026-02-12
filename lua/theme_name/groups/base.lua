@@ -71,20 +71,20 @@ function M.get(c, opts)
 		Folded = { fg = c.green, bg = opts.transparent and c.none or c.bg },
 		FoldColumn = { fg = c.fg_dim, bg = opts.transparent and c.none or c.bg },
 
-		VertSplit = { fg = c.bg },
-		WinSeparator = { fg = c.bg },
+		VertSplit = { fg = opts.borders and c.overlay or c.bg },
+		WinSeparator = { fg = opts.borders and c.overlay or c.bg },
 
 		NormalFloat = { fg = c.fg, bg = c.surface },
-		FloatBorder = { fg = c.surface, bg = c.surface },
+		FloatBorder = { fg = opts.borders and c.overlay or c.surface, bg = c.surface },
 		FloatTitle = { fg = c.cyan, bg = c.overlay },
 
-		Pmenu = { bg = c.surface, fg = c.fg_dim },
+		Pmenu = { bg = c.surface, fg = c.float_dim },
 		PmenuSel = { bg = c.highlight_high },
 		PmenuSbar = { bg = c.overlay },
-		PmenuThumb = { bg = c.fg_dim },
+		PmenuThumb = { bg = c.float_dim },
 		PmenuMatch = { bg = c.surface, fg = c.fg },
 		PmenuMatchSel = { bg = c.highlight_high, fg = c.fg },
-		WildMenu = { bg = c.surface, fg = c.fg_dim },
+		WildMenu = { bg = c.surface, fg = c.float_dim },
 
 		StatusLine = { fg = c.fg, bg = c.surface },
 		StatusLineNC = { fg = c.fg_dim, bg = c.surface },
@@ -147,7 +147,7 @@ function M.get(c, opts)
 		LspSignatureActiveParameter = { bg = c.highlight_high, bold = true },
 		LspCodeLens = { fg = c.muted },
 		LspInlayHint = { bg = c.highlight_med, fg = c.fg_dim },
-		LspInfoBorder = { fg = c.fg_dim, bg = c.overlay },
+		LspInfoBorder = { fg = opts.borders and c.overlay or c.surface, bg = c.surface },
 
 		SpellBad = { sp = c.error, undercurl = true },
 		SpellCap = { sp = c.warning, undercurl = true },

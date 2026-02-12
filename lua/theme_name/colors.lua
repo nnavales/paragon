@@ -25,12 +25,13 @@ function M.setup(opts)
 		highlight_high = "#33383C",
 
 		-- pure UI
-		surface = "#1D2022",
-		overlay = "#262A2D",
+		surface = "#1F2225",
+		overlay = "#272C2F",
 
 		-- dim
 		bg_dim = "#131618",
 		fg_dim = "#6E797E",
+		float_dim = "#879297",
 		syntax_dim = "#7A878A",
 	}
 
@@ -45,7 +46,7 @@ function M.setup(opts)
 	colors.info = colors.cyan
 	colors.hint = colors.magenta
 
-	-- Search & Match - using existing palette colors with dim backgrounds
+	-- Search & Match
 	colors.search = colors.yellow
 	colors.search_bg = colors.highlight_med
 	colors.substitute = colors.orange
@@ -75,11 +76,19 @@ function M.setup(opts)
 			magenta = colors.magenta,
 			cyan = colors.teal,
 			white = colors.fg,
+
+			bright_black = colors.bg,
+			bright_red = colors.orange,
+			bright_green = colors.green,
+			bright_yellow = colors.yellow,
+			bright_blue = colors.cyan,
+			bright_magenta = colors.magenta,
+			bright_cyan = colors.teal,
+			bright_white = colors.fg,
 		}
 	end
 
-	opts.on_colors(colors)
-	return colors, opts
+	return colors
 end
 
 return M

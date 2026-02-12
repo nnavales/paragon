@@ -5,7 +5,6 @@ M.url = "https://github.com/nvimdev/lspsaga.nvim"
 ---@type theme_name.HighlightsFn
 function M.get(c, opts)
 	return {
-		-- Finder y definiciones
 		DefinitionCount = { fg = c.magenta },
 		DefinitionIcon = { fg = c.cyan },
 		ReferencesCount = { fg = c.magenta },
@@ -13,7 +12,7 @@ function M.get(c, opts)
 		TargetWord = { fg = c.cyan, bold = true },
 
 		-- Bordes de ventanas flotantes
-		LspFloatWinBorder = { fg = c.overlay },
+		LspFloatWinBorder = { fg = opts.borders and c.overlay or c.surface },
 		LspFloatWinNormal = { bg = c.surface },
 
 		-- Títulos y bordes específicos

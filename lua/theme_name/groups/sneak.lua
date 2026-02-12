@@ -4,13 +4,11 @@ M.url = "https://github.com/justinmk/vim-sneak"
 
 ---@type theme_name.HighlightsFn
 function M.get(c, opts)
-  -- stylua: ignore
-  return {
-    Sneak      = "Search" ,
-    SneakCurrent = "IncSearch" ,
-    SneakScope = { bg = c.fg_dim},
-
-  }
+	return {
+		Sneak = "Search",
+		SneakCurrent = "IncSearch",
+		SneakScope = { bg = c.fg_dim },
+	}
 end
 
 return M

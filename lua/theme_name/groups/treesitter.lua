@@ -67,7 +67,7 @@ function M.get(c, opts)
 		["@type.builtin"] = "@type",
 		["@type.definition"] = "@type",
 
-		["@property"] = { fg = c.semantic }, -- property
+		["@property"] = { fg = c.semantic },
 
 		["@tag"] = "Label",
 		["@tag.builtin"] = "@tag",
@@ -76,7 +76,7 @@ function M.get(c, opts)
 		["@tag.delimiter"] = "Delimiter",
 
 		["@variable"] = { fg = c.fg },
-		["@variable.member"] = { fg = c.semantic }, -- @variable
+		["@variable.member"] = { fg = c.semantic },
 		["@variable.parameter"] = "@variable",
 		["@variable.parameter.builtin"] = "@variable",
 		["@variable.builtin"] = { fg = c.fg, style = opts.styles.builtins },
@@ -131,12 +131,10 @@ function M.get(c, opts)
 		["@markup.environment.name"] = "Type",
 		["@markup.math"] = "Special",
 
-		-- DIFF
 		["@diff.plus"] = "DiffAdd",
 		["@diff.minus"] = "DiffDelete",
 		["@diff.delta"] = "DiffChange",
 
-		-- Lenguage especifics.
 		["@tag.tsx"] = "@tag",
 		["@tag.javascript"] = "@tag",
 	}

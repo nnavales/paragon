@@ -2,44 +2,41 @@ local Util = require("theme_name.util")
 
 local M = {}
 
--- stylua: ignore
 M.plugins = {
-  ["telescope.nvim"]                = "telescope",
-  ["fzf-lua"]                       = "fzf",
-  ["which-key.nvim"]                = "which-key",
-  ["lazy.nvim"]                     = "lazy",
-  ["gitsigns.nvim"]                 = "gitsigns",
-  ["nvim-tree.lua"]                 = "nvim-tree",
-  ["nvim-cmp"]                      = "cmp",
-  ["trouble.nvim"]                  = "trouble",
-  ["noice.nvim"]                    = "noice",
-  ["bufferline.nvim"]               = "bufferline",
-  ["barbar.nvim"]                   = "barbar",
-  ["dashboard-nvim"]                = "dashboard",
-  ["neo-tree.nvim"]                 = "neo-tree",
-  ["blink.cmp"]                     = "blink",
-  ["flash.nvim"]                    = "flash",
-  ["aerial.nvim"]                   = "aerial",
-  ["vim-sneak"]                     = "sneak",
-  ["hop.nvim"]                      = "hop",
-  ["leap.nvim"]                     = "leap",
-  ["grug-far.nvim"]                 = "grug-far",
-  ["nvim-notify"]                   = "notify",
-  ["render-markdown.nvim"]          = "render-markdown",
-  ["headlines.nvim"]                = "headlines",
-  ["indentmini.nvim"] = "indentmini",
-  ["vim-gitgutter"]                 = "gitgutter",
-  ["vim-glyph-palette"]             = "glyph-palette",
-  ["mini.icons"]                    = "mini_icons",
-  ["lspsaga.nvim"]                  = "lspsaga",
-  ["neotest"]                       = "neotest",
-  ["neogit"]                        = "neogit",
-  ["diffview.nvim"]                 = "diffview",
-  ["snacks.nvim"]                   = "snacks",
+	["telescope.nvim"] = "telescope",
+	["fzf-lua"] = "fzf",
+	["which-key.nvim"] = "which-key",
+	["lazy.nvim"] = "lazy",
+	["gitsigns.nvim"] = "gitsigns",
+	["nvim-tree.lua"] = "nvim-tree",
+	["nvim-cmp"] = "cmp",
+	["trouble.nvim"] = "trouble",
+	["noice.nvim"] = "noice",
+	["bufferline.nvim"] = "bufferline",
+	["barbar.nvim"] = "barbar",
+	["dashboard-nvim"] = "dashboard",
+	["neo-tree.nvim"] = "neo-tree",
+	["blink.cmp"] = "blink",
+	["flash.nvim"] = "flash",
+	["aerial.nvim"] = "aerial",
+	["vim-sneak"] = "sneak",
+	["hop.nvim"] = "hop",
+	["leap.nvim"] = "leap",
+	["grug-far.nvim"] = "grug-far",
+	["nvim-notify"] = "notify",
+	["render-markdown.nvim"] = "render-markdown",
+	["headlines.nvim"] = "headlines",
+	["indentmini.nvim"] = "indentmini",
+	["vim-gitgutter"] = "gitgutter",
+	["vim-glyph-palette"] = "glyph-palette",
+	["mini.pick"] = "mini_pick",
+	["mini.icons"] = "mini_icons",
+	["lspsaga.nvim"] = "lspsaga",
+	["neotest"] = "neotest",
+	["neogit"] = "neogit",
+	["diffview.nvim"] = "diffview",
+	["snacks.nvim"] = "snacks",
 }
-
-local me = debug.getinfo(1, "S").source:sub(2)
-me = vim.fn.fnamemodify(me, ":h")
 
 function M.get_group(name)
 	---@type {get: theme_name.HighlightsFn, url: string}
@@ -63,12 +60,27 @@ function M.setup(colors, opts)
 		treesitter = true,
 	}
 
-	for _, group in pairs(M.plugins) do
-		groups[group] = true
+	-- Auto-detect plugins with lazy.nvim, or load all if no lazy.nvim
+	if package.loaded.lazy then
+		local lazy_plugins = require("lazy.core.config").plugins
+		for plugin, group in pairs(M.plugins) do
+			if lazy_plugins[plugin] then
+				groups[group] = true
+			end
+		end
+	else
+		-- No lazy.nvim: load all plugins
+		for _, group in pairs(M.plugins) do
+			groups[group] = true
+		end
 	end
 
-	local names = vim.tbl_keys(groups)
-	table.sort(names)
+	-- Apply manual overrides
+	for name, enabled in pairs(opts.plugins) do
+		if type(enabled) == "boolean" then
+			groups[name] = enabled or nil
+		end
+	end
 
 	local ret = {}
 	-- merge highlights
@@ -78,9 +90,8 @@ function M.setup(colors, opts)
 		end
 	end
 	Util.resolve(ret)
-	opts.on_highlights(ret, colors)
 
-	return ret, groups
+	return ret
 end
 
 return M
