@@ -69,7 +69,7 @@ function M.setup(opts)
 	if opts.terminal_colors then
 		colors.terminal = {
 			black = colors.bg,
-			red = colors.orange,
+			red = colors.red,
 			green = colors.green,
 			yellow = colors.yellow,
 			blue = colors.cyan,
@@ -77,14 +77,14 @@ function M.setup(opts)
 			cyan = colors.teal,
 			white = colors.fg,
 
-			bright_black = colors.bg,
-			bright_red = colors.orange,
-			bright_green = colors.green,
-			bright_yellow = colors.yellow,
-			bright_blue = colors.cyan,
-			bright_magenta = colors.magenta,
-			bright_cyan = colors.teal,
-			bright_white = colors.fg,
+			bright_black = colors.highlight_high,
+			bright_red = "#F08090",
+			bright_green = "#88E888",
+			bright_yellow = "#FFF2B0",
+			bright_blue = "#D0FFFF",
+			bright_magenta = "#D8C5F0",
+			bright_cyan = "#88E0D0",
+			bright_white = "#F5FAFA",
 		}
 	end
 
