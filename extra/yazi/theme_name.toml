@@ -1,131 +1,365 @@
+# theme_name - Clean Yazi Theme
+# Upstream: https://github.com/nnahuel/
+
+# =============================================================================
+# Manager (File Manager)
+# =============================================================================
+
 [mgr]
 cwd = { fg = "#C3D0D2", italic = true }
 
-hovered         = { bg = "#202325" }
+hovered = { bg = "#202325" }
 preview_hovered = { bg = "#202325" }
 
-find_keyword  = { fg = "#181A1C", bg = "#EAD88A", bold = true }
+find_keyword = { fg = "#181A1C", bg = "#EAD88A", bold = true }
 find_position = { fg = "#9EDFE2", bg = "#1B1E20", bold = true }
 
-marker_copied   = { fg = "#72C472", bg = "#72C472" }
-marker_cut      = { fg = "#D04E63", bg = "#D04E63" }
-marker_marked   = { fg = "#B8A0D5", bg = "#B8A0D5" }
+# Markers - using semantic colors
+marker_copied = { fg = "#72C472", bg = "#72C472" }
+marker_cut = { fg = "#D04E63", bg = "#D04E63" }
+marker_marked = { fg = "#B8A0D5", bg = "#B8A0D5" }
 marker_selected = { fg = "#9EDFE2", bg = "#9EDFE2" }
 
-count_copied   = { fg = "#181A1C", bg = "#72C472" }
-count_cut      = { fg = "#181A1C", bg = "#D04E63" }
-count_selected = { fg = "#181A1C", bg = "#9EDFE2" }
+# Count badges
+# count_copied = { fg = "#181A1C", bg = "#72C472" }
+# count_cut = { fg = "#181A1C", bg = "#D04E63" }
+# count_selected = { fg = "#181A1C", bg = "#9EDFE2" }
 
+# Border - visible but subtle
 border_symbol = "│"
-border_style  = { fg = "#5FB3A3" }
+border_style = { fg = "#33383C" }
+
+# =============================================================================
+# Tabs
+# =============================================================================
 
 [tabs]
-active   = { fg = "#181A1C", bg = "#9EDFE2" }
-inactive = { fg = "#9EDFE2", bg = "#1B1E20" }
+active = { fg = "#181A1C", bg = "#9EDFE2", bold = true }
+inactive = { fg = "#9EDFE2", bg = "#1F2225" }
+
+# Simple tabs without powerline
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+# =============================================================================
+# Mode Indicator
+# =============================================================================
 
 [mode]
+# Normal mode - cyan (functions)
 normal_main = { fg = "#181A1C", bg = "#9EDFE2", bold = true }
-normal_alt  = { fg = "#9EDFE2", bg = "#1B1E20" }
+normal_alt = { fg = "#9EDFE2", bg = "#1B1E20" }
 
+# Select mode - magenta (hints)
 select_main = { fg = "#181A1C", bg = "#B8A0D5", bold = true }
-select_alt  = { fg = "#B8A0D5", bg = "#1B1E20" }
+select_alt = { fg = "#B8A0D5", bg = "#1B1E20" }
 
-unset_main  = { fg = "#181A1C", bg = "#5FB3A3", bold = true }
-unset_alt   = { fg = "#5FB3A3", bg = "#1B1E20" }
+# Unset mode - teal (types)
+unset_main = { fg = "#181A1C", bg = "#5FB3A3", bold = true }
+unset_alt = { fg = "#5FB3A3", bg = "#1B1E20" }
+
+# =============================================================================
+# Selection Indicator
+# =============================================================================
+
+[indicator]
+parent = { fg = "#6E797E" }
+current = { bg = "#33383C", bold = true }
+preview = { fg = "#6E797E" }
+padding = { open = " ", close = " " }
+
+# =============================================================================
+# Status Bar
+# =============================================================================
 
 [status]
-overall   = { fg = "#E9F2F2", bg = "#131618" }
-sep_left  = { open = "", close = "" }
-sep_right = { open = "", close = "" }
+overall = { fg = "#E9F2F2", bg = "#1F2225" }
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
 
-progress_label  = { fg = "#E9F2F2", bold = true }
+# Progress
+progress_label = { fg = "#E9F2F2", bold = true }
 progress_normal = { fg = "#5FB3A3", bg = "#202325" }
-progress_error  = { fg = "#D04E63", bg = "#202325" }
+progress_error = { fg = "#D04E63", bg = "#202325" }
 
-perm_type  = { fg = "#5FB3A3" }
-perm_read  = { fg = "#E69A6C" }
+# Permissions - clear differentiation
+perm_sep = { fg = "#33383C" }
+perm_type = { fg = "#5FB3A3" }
+perm_read = { fg = "#E69A6C" }
 perm_write = { fg = "#D04E63" }
-perm_exec  = { fg = "#72C472" }
-perm_sep   = { fg = "#33383C" }
+perm_exec = { fg = "#72C472" }
 
-[pick]
-border   = { fg = "#5FB3A3" }
-active   = { fg = "#E9F2F2",  bg = "#202325" }
-inactive = { fg = "#E9F2F2" }
-
-[input]
-border   = { fg = "#9EDFE2" }
-title    = { fg = "#9EDFE2" }
-value    = { fg = "#B8A0D5" }
-selected = { bg = "#202325" }
-
-[cmp]
-border   = { fg = "#9EDFE2" }
-active   = { fg = "#E9F2F2", bg = "#33383C" }
-inactive = { fg = "#E9F2F2" }
-
-icon_file    = ""
-icon_folder  = ""
-icon_command = ""
-
-[tasks]
-border  = { fg = "#5FB3A3" }
-title   = { fg = "#5FB3A3" }
-hovered = { fg = "#E9F2F2", bg = "#202325" }
+# =============================================================================
+# Which Key Menu
+# =============================================================================
 
 [which]
-cols            = 3
-mask            = { bg = "#131618" }
-cand            = { fg = "#9EDFE2" }
-rest            = { fg = "#9EDFE2" }
-desc            = { fg = "#B8A0D5" }
-separator       = " ➜ "
-separator_style = { fg = "#7A878A" }
+cols = 3
+mask = { bg = "#131618" }
+cand = { fg = "#9EDFE2" }
+rest = { fg = "#7A878A" }
+desc = { fg = "#C3D0D2" }
+separator = "  "
+separator_style = { fg = "#33383C" }
+
+# =============================================================================
+# Confirm Dialog
+# =============================================================================
 
 [confirm]
-border  = { fg = "#9EDFE2" }
-title   = { fg = "#5FB3A3" }
-content = {}
-list    = {}
-btn_yes = { bg = "#202325" }
-btn_no  = {}
-btn_labels = [ "  [Y]es  ", "  (N)o  " ]
+border = { fg = "#33383C" }
+title = { fg = "#9EDFE2" }
+btn_yes = { fg = "#181A1C", bg = "#72C472", bold = true }
+btn_no = { fg = "#E9F2F2", bg = "#272C2F" }
+btn_labels = [ "  Yes  ", "  No  " ]
+
+# =============================================================================
+# Spotter (File Info)
+# =============================================================================
 
 [spot]
-border  = { fg = "#5FB3A3" }
-title   = { fg = "#5FB3A3" }
+border = { fg = "#33383C" }
+
+# =============================================================================
+# Notifications
+# =============================================================================
 
 [notify]
-title_info  = { fg = "#9EDFE2" }
-title_warn  = { fg = "#E69A6C" }
+title_info = { fg = "#9EDFE2" }
+title_warn = { fg = "#E69A6C" }
 title_error = { fg = "#D04E63" }
-
-icon_error = ""
-icon_warn = ""
 icon_info = ""
+icon_warn = ""
+icon_error = ""
+
+# =============================================================================
+# Picker
+# =============================================================================
+
+[pick]
+border = { fg = "#33383C" }
+active = { fg = "#E9F2F2", bg = "#33383C" }
+inactive = { fg = "#8B9C9F" }
+
+# =============================================================================
+# Input
+# =============================================================================
+
+[input]
+border = { fg = "#33383C" }
+title = { fg = "#9EDFE2" }
+value = { fg = "#E9F2F2" }
+selected = { bg = "#33383C" }
+
+# =============================================================================
+# Completion
+# =============================================================================
+
+[cmp]
+border = { fg = "#33383C" }
+active = { fg = "#E9F2F2", bg = "#33383C" }
+inactive = { fg = "#8B9C9F" }
+
+# =============================================================================
+# Tasks
+# =============================================================================
+
+[tasks]
+border = { fg = "#33383C" }
+hovered = { fg = "#E9F2F2", bg = "#202325" }
+
+# =============================================================================
+# Help Menu
+# =============================================================================
 
 [help]
-on      = { fg = "#72C472" }
-run     = { fg = "#B8A0D5" }
-desc    = { fg = "#9EDFE2" }
+on = { fg = "#72C472" }
+run = { fg = "#B8A0D5" }
+desc = { fg = "#C3D0D2" }
 hovered = { bg = "#202325" }
-footer  = { fg = "#E9F2F2", bg = "#181A1C" }
+footer = { fg = "#8B9C9F", bg = "#181A1C" }
+
+# =============================================================================
+# File Type Highlighting
+# =============================================================================
 
 [filetype]
-
 rules = [
-	{ mime = "image/*", fg = "#E69A6C" },
+    # Images - yellow (constants)
+    { mime = "image/*", fg = "#EAD88A" },
 
-	{ mime = "{audio,video}/*", fg = "#B8A0D5" },
+    # Media - magenta (hints)
+    { mime = "{audio,video}/*", fg = "#B8A0D5" },
 
-	{ mime = "application/*zip", fg = "#D04E63" },
-	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "#D04E63" },
+    # Archives - red (danger/action)
+    { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#D04E63" },
 
-	{ mime = "application/{pdf,doc,rtf,vnd.*}", fg = "#9EDFE2" },
+    # Documents - cyan (functions)
+    { mime = "application/{pdf,doc,rtf}", fg = "#9EDFE2" },
 
-	{ name = "*", is = "orphan", bg = "#D04E63" },
-	{ name = "*", is = "exec"  , fg = "#72C472" },
+    # Symlinks - fg_dim
+    { mime = "vfs/{absent,stale}", fg = "#6E797E" },
 
-	{ name = "*/", fg = "#9EDFE2" },
-	{ name = "*", fg = "#E9F2F2" }
+    # Orphan files - red background
+    { name = "*", is = "orphan", bg = "#D04E63" },
+
+    # Executables - green (keywords)
+    { name = "*", is = "exec", fg = "#72C472" },
+
+    # Directories - cyan (functions)
+    { name = "*/", fg = "#9EDFE2" },
+
+    # Fallback - main text
+    { name = "*", fg = "#E9F2F2" }
+]
+
+# =============================================================================
+# Icons - Essential Set with Nerd Fonts
+# =============================================================================
+
+[icon]
+globs = []
+dirs = [
+    { name = ".config", text = "", fg = "#E69A6C" },
+    { name = ".git", text = "", fg = "#D04E63" },
+    { name = ".github", text = "", fg = "#9EDFE2" },
+    { name = "Desktop", text = "", fg = "#5FB3A3" },
+    { name = "Development", text = "", fg = "#9EDFE2" },
+    { name = "Documents", text = "", fg = "#9EDFE2" },
+    { name = "Downloads", text = "", fg = "#E69A6C" },
+    { name = "Library", text = "", fg = "#9EDFE2" },
+    { name = "Movies", text = "", fg = "#D04E63" },
+    { name = "Music", text = "", fg = "#B8A0D5" },
+    { name = "Pictures", text = "", fg = "#EAD88A" },
+    { name = "Public", text = "", fg = "#9EDFE2" },
+    { name = "Videos", text = "", fg = "#D04E63" },
+]
+files = [
+    { name = ".bash_profile", text = "", fg = "#72C472" },
+    { name = ".bashrc", text = "", fg = "#72C472" },
+    { name = ".git-blame-ignore-revs", text = "", fg = "#D04E63" },
+    { name = ".gitattributes", text = "", fg = "#D04E63" },
+    { name = ".gitconfig", text = "", fg = "#D04E63" },
+    { name = ".gitignore", text = "", fg = "#D04E63" },
+    { name = ".gitmodules", text = "", fg = "#D04E63" },
+    { name = ".vimrc", text = "", fg = "#72C472" },
+    { name = ".zprofile", text = "", fg = "#72C472" },
+    { name = ".zshenv", text = "", fg = "#72C472" },
+    { name = ".zshrc", text = "", fg = "#72C472" },
+    { name = "docker-compose.yml", text = "󰡨", fg = "#9EDFE2" },
+    { name = "docker-compose.yaml", text = "󰡨", fg = "#9EDFE2" },
+    { name = "dockerfile", text = "󰡨", fg = "#9EDFE2" },
+    { name = "license", text = "", fg = "#EAD88A" },
+    { name = "license.md", text = "", fg = "#EAD88A" },
+    { name = "makefile", text = "", fg = "#6E797E" },
+    { name = "package.json", text = "", fg = "#EAD88A" },
+    { name = "readme", text = "󰂺", fg = "#9EDFE2" },
+    { name = "readme.md", text = "󰂺", fg = "#9EDFE2" },
+    { name = "tsconfig.json", text = "", fg = "#9EDFE2" },
+]
+exts = [
+    # Shell scripts - green (keywords)
+    { name = "sh", text = "", fg = "#72C472" },
+    { name = "bash", text = "", fg = "#72C472" },
+    { name = "zsh", text = "", fg = "#72C472" },
+    { name = "fish", text = "", fg = "#72C472" },
+    { name = "ps1", text = "󰨊", fg = "#9EDFE2" },
+
+    # Config files - teal (types)
+    { name = "toml", text = "", fg = "#5FB3A3" },
+    { name = "yaml", text = "", fg = "#5FB3A3" },
+    { name = "yml", text = "", fg = "#5FB3A3" },
+    { name = "json", text = "", fg = "#5FB3A3" },
+    { name = "ini", text = "", fg = "#5FB3A3" },
+    { name = "conf", text = "", fg = "#5FB3A3" },
+
+    # Programming - cyan (functions)
+    { name = "lua", text = "", fg = "#9EDFE2" },
+    { name = "py", text = "", fg = "#9EDFE2" },
+    { name = "js", text = "", fg = "#EAD88A" },
+    { name = "ts", text = "", fg = "#9EDFE2" },
+    { name = "tsx", text = "", fg = "#9EDFE2" },
+    { name = "jsx", text = "", fg = "#EAD88A" },
+    { name = "go", text = "", fg = "#9EDFE2" },
+    { name = "rs", text = "", fg = "#E69A6C" },
+    { name = "c", text = "", fg = "#9EDFE2" },
+    { name = "cpp", text = "", fg = "#9EDFE2" },
+    { name = "cc", text = "", fg = "#9EDFE2" },
+    { name = "h", text = "", fg = "#5FB3A3" },
+    { name = "hpp", text = "", fg = "#5FB3A3" },
+    { name = "vim", text = "", fg = "#72C472" },
+
+    # Web - teal (types)
+    { name = "css", text = "", fg = "#5FB3A3" },
+    { name = "scss", text = "", fg = "#5FB3A3" },
+    { name = "less", text = "", fg = "#5FB3A3" },
+    { name = "html", text = "", fg = "#E69A6C" },
+    { name = "htm", text = "", fg = "#E69A6C" },
+
+    # Data - yellow (constants) or muted
+    { name = "csv", text = "", fg = "#EAD88A" },
+    { name = "md", text = "", fg = "#E9F2F2" },
+    { name = "markdown", text = "", fg = "#E9F2F2" },
+    { name = "txt", text = "󰈙", fg = "#8B9C9F" },
+    { name = "log", text = "󰌱", fg = "#8B9C9F" },
+
+    # Media - magenta (hints)
+    { name = "jpg", text = "", fg = "#B8A0D5" },
+    { name = "jpeg", text = "", fg = "#B8A0D5" },
+    { name = "png", text = "", fg = "#B8A0D5" },
+    { name = "gif", text = "", fg = "#B8A0D5" },
+    { name = "svg", text = "󰜡", fg = "#B8A0D5" },
+    { name = "webp", text = "", fg = "#B8A0D5" },
+    { name = "mp3", text = "", fg = "#B8A0D5" },
+    { name = "mp4", text = "", fg = "#D04E63" },
+    { name = "webm", text = "", fg = "#D04E63" },
+    { name = "wav", text = "", fg = "#B8A0D5" },
+    { name = "flac", text = "", fg = "#B8A0D5" },
+    { name = "ogg", text = "", fg = "#B8A0D5" },
+
+    # Archives - red (errors/danger)
+    { name = "zip", text = "", fg = "#D04E63" },
+    { name = "tar", text = "", fg = "#D04E63" },
+    { name = "gz", text = "", fg = "#D04E63" },
+    { name = "tgz", text = "", fg = "#D04E63" },
+    { name = "bz2", text = "", fg = "#D04E63" },
+    { name = "7z", text = "", fg = "#D04E63" },
+    { name = "rar", text = "", fg = "#D04E63" },
+
+    # Documents - cyan or yellow
+    { name = "pdf", text = "", fg = "#E69A6C" },
+    { name = "doc", text = "󰈬", fg = "#9EDFE2" },
+    { name = "docx", text = "󰈬", fg = "#9EDFE2" },
+    { name = "xls", text = "󰈛", fg = "#72C472" },
+    { name = "xlsx", text = "󰈛", fg = "#72C472" },
+    { name = "ppt", text = "󰈧", fg = "#E69A6C" },
+    { name = "pptx", text = "󰈧", fg = "#E69A6C" },
+
+    # Fonts
+    { name = "ttf", text = "", fg = "#C3D0D2" },
+    { name = "otf", text = "", fg = "#C3D0D2" },
+    { name = "woff", text = "", fg = "#C3D0D2" },
+    { name = "woff2", text = "", fg = "#C3D0D2" },
+
+    # Git
+    { name = "git", text = "", fg = "#D04E63" },
+
+    # Lock files
+    { name = "lock", text = "", fg = "#8B9C9F" },
+]
+conds = [
+    # Special files with clear visual indicators
+    { if = "orphan", text = "", fg = "#D04E63" },
+    { if = "link", text = "", fg = "#8B9C9F" },
+    { if = "block", text = "", fg = "#5FB3A3" },
+    { if = "char", text = "", fg = "#5FB3A3" },
+    { if = "fifo", text = "", fg = "#5FB3A3" },
+    { if = "sock", text = "", fg = "#5FB3A3" },
+    { if = "sticky", text = "", fg = "#EAD88A" },
+    { if = "dummy", text = "", fg = "#D04E63" },
+
+    # Directory and file fallback
+    { if = "dir", text = "", fg = "#9EDFE2" },
+    { if = "exec", text = "", fg = "#72C472" },
+    { if = "!dir", text = "", fg = "#E9F2F2" },
 ]

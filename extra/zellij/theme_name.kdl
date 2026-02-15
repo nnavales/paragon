@@ -1,0 +1,22 @@
+// theme_name Zellij Theme
+// Upstream: https://github.com/nnahuel/
+// Add this file to your `CONFIG_DIR/themes` directory as described here:
+// https://zellij.dev/documentation/themes#getting-zellij-to-pick-up-the-theme
+
+themes {
+    theme_name {
+        fg "#E9F2F2"
+        bg "#181A1C"
+        // Black should match the terminal background color
+        // This ensures the top and bottom bars are transparent
+        black "#181A1C"
+        red "#D04E63"
+        green "#72C472"
+        yellow "#EAD88A"
+        blue "#9EDFE2"
+        magenta "#B8A0D5"
+        cyan "#5FB3A3"
+        white "#E9F2F2"
+        orange "#E69A6C"
+    }
+}

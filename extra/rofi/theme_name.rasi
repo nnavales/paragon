@@ -1,0 +1,134 @@
+* {
+  bg:           #1F2225;
+  fg:           #E9F2F2;
+  bg-selected:  #33383C;
+  bg-alt:       #181A1C;
+  border:       #272C2F;
+  prompt:       #9EDFE2;
+  info:         #879297;
+  highlight:    #EAD88A;
+  marker:       #72C472;
+
+  background-color: transparent;
+  text-color: @fg;
+  font: "Lexend 13"; // use your favorite font
+  spacing: 0;
+}
+
+window {
+  background-color: @bg;
+  border: 2px solid;
+  border-color: @border;
+  border-radius: 4px;
+  padding: 0;
+  width: 50%;
+  location: center;
+  y-offset: 0;
+}
+
+mainbox {
+  padding: 4px;
+  spacing: 4px;
+  border: 0;
+}
+
+inputbar {
+  padding: 8px 12px;
+  spacing: 8px;
+  background-color: @bg-alt;
+  text-color: @fg;
+  border-radius: 4px;
+  margin: 4px;
+  children: [ prompt, entry ];
+}
+
+prompt {
+  enabled: true;
+  text-color: @prompt;
+  str: "› ";
+}
+
+entry {
+  text-color: @fg;
+  placeholder-color: #6E797E;
+  placeholder: "";
+}
+
+case-indicator {
+  enabled: false;
+}
+
+listview {
+  padding: 4px;
+  spacing: 2px;
+  lines: 6;
+  fixed-height: false;
+  scrollbar: false;
+  border: 0;
+}
+
+element {
+  padding: 8px 12px;
+  spacing: 12px;
+  border: 0;
+  border-radius: 4px;
+  background-color: @bg;
+  text-color: @fg;
+}
+
+element normal.normal {
+  background-color: @bg;
+  text-color: @fg;
+}
+
+element alternate.normal {
+  background-color: @bg;
+  text-color: @fg;
+}
+
+element selected.normal {
+  background-color: @bg-selected;
+  text-color: @fg;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+  highlight: bold underline;
+}
+
+element-icon {
+  background-color: transparent;
+  size: 1.2em;
+  text-color: inherit;
+}
+
+message {
+  padding: 8px 12px;
+  background-color: @bg-alt;
+  text-color: @fg;
+  border: 0;
+  margin: 4px;
+  border-radius: 4px;
+}
+
+textbox {
+  text-color: @fg;
+}
+
+scrollbar {
+  enabled: false;
+}
+
+sidebar {
+  enabled: false;
+}
+
+button {
+  enabled: false;
+}
+
+mode-switcher {
+  enabled: false;
+}

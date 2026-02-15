@@ -1,0 +1,87 @@
+* {
+    background-color: #1f2225;
+    color: #e9f2f2;
+
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: "Lexend"; /* set your favorite font */
+    font-size: 13px;
+}
+
+.modules-left {
+    margin-left: 8px;
+}
+
+.modules-right {
+    margin-right: 8px;
+}
+
+#workspaces button {
+    all: initial;
+    background-color: transparent;
+    color: #6e797e;
+    padding: 0 6px;
+    margin: 0 1.5px;
+    min-width: 9px;
+}
+
+#workspaces button.empty {
+    opacity: 0.5;
+}
+
+#workspaces button.active {
+    color: #e9f2f2;
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    color: #9edfe2;
+}
+
+#clock {
+    color: #e9f2f2;
+    margin-left: 8.75px;
+}
+
+#cpu,
+#memory,
+#network,
+#pulseaudio {
+    min-width: 12px;
+    padding: 4px 10px;
+    margin: 0 4px;
+    color: #e9f2f2;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#pulseaudio:hover {
+    background-color: #33383c;
+}
+
+#pulseaudio.muted {
+    color: #6e797e;
+}
+
+#network.disconnected {
+    color: #d04e63;
+}
+
+tooltip {
+    background: #1f2225;
+    border: 1px solid #272c2f;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+tooltip label {
+    color: #e9f2f2;
+}
+
+.hidden {
+    opacity: 0;
+}
