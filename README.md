@@ -3,7 +3,7 @@
 	Paragon
 </h1>
 <p align="center">
-  <img src="assets/preview_hero.png"  alt="Paragon Preview" />
+  <img src="assets/preview_transparent.png"  alt="Paragon Preview" />
 </p>
 
 <p align="center">
