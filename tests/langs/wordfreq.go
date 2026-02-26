@@ -29,7 +29,7 @@ func main() {
 	counts := make(map[string]int)
 	word := make([]rune, 0)
 
-	scanner := bufio.NewScanner(f)
+	scanner := bufio.NewS(f)
 	scanner.Split(bufio.ScanRunes)
 
 	for scanner.Scan() {
