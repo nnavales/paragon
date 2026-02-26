@@ -1,8 +1,13 @@
 {
-    "name": "Paragon",
-    "displayName": "Paragon",
+    "name": "paragon-theme",
+    "displayName": "Paragon Theme",
     "description": "A carefully crafted dark theme focused on readability, balanced contrast, and elegant color harmony.",
     "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nnavales/paragon"
+    },
+    "icon": "./icon.png",
     "publisher": "nnavales",
     "engines": {
         "vscode": "^1.74.0"
