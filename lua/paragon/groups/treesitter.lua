@@ -3,7 +3,6 @@ local M = {}
 ---@type paragon.HighlightsFn
 function M.get(c, opts)
 	return {
-
 		["@comment"] = "Comment",
 		["@comment.nospell"] = { fg = c.muted, style = opts.styles.comments },
 		["@comment.error"] = { fg = c.error },
@@ -57,7 +56,6 @@ function M.get(c, opts)
 		["@function.macro"] = "@function",
 
 		["@constructor"] = "Function",
-		["@constructor.tsx"] = "@constructor",
 
 		["@attribute"] = "PreProc",
 		["@attribute.builtin"] = "@attribute",
@@ -69,10 +67,9 @@ function M.get(c, opts)
 
 		["@property"] = { fg = c.semantic },
 
-		["@tag"] = "Label",
+		["@tag"] = { fg = c.purple },
 		["@tag.builtin"] = "@tag",
 		["@tag.attribute"] = { fg = c.semantic },
-		["@tag.delimiter.tsx"] = { fg = c.fg_dim },
 		["@tag.delimiter"] = "Delimiter",
 
 		["@variable"] = { fg = c.fg },
@@ -135,8 +132,68 @@ function M.get(c, opts)
 		["@diff.minus"] = "DiffDelete",
 		["@diff.delta"] = "DiffChange",
 
-		["@tag.tsx"] = "@tag",
 		["@tag.javascript"] = "@tag",
+
+		["@attribute.diff"] = { fg = c.yellow },
+		["@parameter"] = { fg = c.purple, style = opts.styles.comments },
+		["@punctuation"] = { fg = c.syntax_dim },
+		["@regexp"] = "String",
+		["@symbol"] = "Identifier",
+		["@text"] = { fg = c.fg },
+		["@text.danger"] = { fg = c.error },
+		["@text.diff.add"] = { fg = c.green, bg = c.diff.add, blend = 20 },
+		["@text.diff.delete"] = { fg = c.red, bg = c.diff.delete, blend = 20 },
+		["@text.emphasis"] = { italic = true },
+		["@text.environment"] = "Macro",
+		["@text.environment.name"] = "Type",
+		["@text.math"] = "Special",
+		["@text.note"] = "SpecialComment",
+		["@text.strike"] = { strikethrough = true },
+		["@text.strong"] = { bold = true },
+		["@text.title"] = "Title",
+		["@text.underline"] = { underline = true },
+		["@text.uri"] = { fg = c.yellow, underline = true },
+		["@text.warning"] = { fg = c.warning },
+
+		["@string.special"] = "String",
+		["@string.special.symbol"] = "Identifier",
+		["@string.special.url"] = { fg = c.yellow, underline = true },
+		["@float"] = "Number",
+		["@keyword.conditional.ternary"] = "@keyword",
+		["@conceal"] = "Conceal",
+		["@conceal.markdown"] = { fg = c.syntax_dim },
+		["@markup.quote"] = { fg = c.fg },
+		["@markup.raw.delimiter.markdown"] = { fg = c.syntax_dim },
+
+		["@tag.attribute.tsx"] = "@tag.attribute",
+		["@tag.delimiter.tsx"] = "@tag.delimiter",
+		["@tag.tsx"] = "@tag",
+
+		["@property.tsx"] = "@property",
+		["@property.jsx"] = "@property",
+
+		["@function.call.tsx"] = "@function.call",
+		["@function.call.jsx"] = "@function.call",
+
+		["@constructor.jsx"] = "@constructor",
+		["@constructor.tsx"] = "@constructor",
+
+		["@variable.parameter.tsx"] = "@variable.parameter",
+
+		htmlArg = { fg = c.purple },
+		htmlBold = { bold = true },
+		htmlEndTag = { fg = c.syntax_dim },
+		htmlH1 = "Title",
+		htmlH2 = "Title",
+		htmlH3 = "Title",
+		htmlH4 = "Title",
+		htmlH5 = "Title",
+		htmlItalic = { italic = true },
+		htmlLink = "Underlined",
+		htmlTag = { fg = c.syntax_dim },
+		htmlTagN = { fg = c.fg },
+		htmlTagName = { fg = c.purple },
+		tsxAttrib = { fg = c.semantic },
 	}
 end
 

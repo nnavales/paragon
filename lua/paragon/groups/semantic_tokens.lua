@@ -45,6 +45,10 @@ function M.get(c)
 		["@lsp.typemod.variable.defaultLibrary"] = "@variable.builtin",
 		["@lsp.typemod.variable.injected"] = "@variable",
 		["@lsp.typemod.variable.static"] = "@constant",
+		["@lsp.type.comment.c"] = "@comment",
+		["@lsp.type.comment.cpp"] = "@comment",
+		["@lsp.type.variable.svelte"] = "@variable",
+		["@lsp.typemod.variable.constant"] = "@constant",
 	}
 end
 

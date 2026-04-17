@@ -172,6 +172,21 @@ function M.get(c, opts)
 		ComplHint = { fg = c.muted },
 		debugPC = { bg = c.overlay },
 		debugBreakpoint = { fg = c.info },
+
+		RedrawDebugClear = { fg = c.bg, bg = c.yellow },
+		RedrawDebugComposed = { fg = c.bg, bg = c.teal },
+		RedrawDebugRecompose = { fg = c.bg, bg = c.red },
+		StatusLineTerm = { fg = c.fg, bg = c.teal },
+		StatusLineTermNC = { fg = c.fg_dim, bg = c.teal },
+		NvimInternalError = { fg = c.error },
+		LspCodeLensSeparator = { fg = c.fg_dim },
+		Added = { fg = c.git.add },
+		Changed = { fg = c.git.change },
+		Removed = { fg = c.git.delete },
+		PmenuExtra = { fg = c.muted, bg = c.surface },
+		PmenuExtraSel = { fg = c.fg_dim, bg = c.overlay },
+		PmenuKind = { fg = c.cyan, bg = c.surface },
+		PmenuKindSel = { fg = c.fg_dim, bg = c.overlay },
 	}
 end
 
